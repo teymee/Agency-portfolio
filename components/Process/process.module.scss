@@ -14,13 +14,17 @@
 		justify-content: center;
 		align-items: center;
 		display: flex;
+		flex-direction: column;
 		text-align: center;
 		border-radius: 20px;
-		font-size: 25px;
+		font-size: 20px;
+		cursor: pointer;
+		
 	}
 	.plan {
 		padding: 0 20px;
 		background-color: #0f1822;
+	
 	}
 	.dev {
 		background-color: var(--darkBlue);
@@ -35,6 +39,7 @@
 		align-items: center;
 		display: flex;
 		font-size: 25px;
+		cursor: pointer;
 	}
 
 	.prototype {

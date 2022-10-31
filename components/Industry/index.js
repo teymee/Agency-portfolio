@@ -1,43 +1,51 @@
 import React from "react";
 import styles from "./industry.module.scss";
+import { BiBroadcast } from "react-icons/bi";
+import { BiStoreAlt } from "react-icons/bi";
+import { BiBook } from "react-icons/bi";
+import { CiBank } from "react-icons/ci";
+import { CiDeliveryTruck } from "react-icons/ci";
+import { CiStethoscope } from "react-icons/ci";
+import { CiPlane } from "react-icons/ci";
+import { CiBeaker1 } from "react-icons/ci";
 export default function Industry() {
 	let industries = [
 		{
 			name: "Technology",
-			icon: "icon",
+			icon: <BiBroadcast/>,
 		},
 
     {
 			name: "E-commerce",
-			icon: "icon",
+			icon:<BiStoreAlt/>,
 		},
     {
 			name: "Banking",
-			icon: "icon",
+			icon: <CiBank/>,
 		},
 		{
 			name: "Logistics and Shipping",
-			icon: "icon",
+			icon: <CiDeliveryTruck/>,
 		},
 
 		{
 			name: "Health care",
-			icon: "icon",
+			icon: <CiStethoscope/>,
 		},
 
 		{
 			name: "Travel",
-			icon: "icon",
+			icon: <CiPlane/>,
 		},
 
 		{
 			name: "Education",
-			icon: "icon",
+			icon: <BiBook/>,
 		},
 
     {
 			name: "Manufacturing",
-			icon: "icon",
+			icon: <CiBeaker1/>,
 		},
 	];
 	return (
@@ -47,7 +55,7 @@ export default function Industry() {
 				{industries.map((item, index) => {
 					return (
 						<div className={`text-center ${styles.industryList} `} key={index}>
-							<span>{item.icon}</span>
+							<div>{item.icon}</div>
 							<h4>{item.name}</h4>
 						</div>
 					);
