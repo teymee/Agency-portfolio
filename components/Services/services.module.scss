@@ -1,0 +1,33 @@
+.services{
+      margin-top: 80px;
+ 
+      h1{
+            text-align: center !important;
+            font-size: 50px;
+            margin: 40px 0;
+      }
+      .serviceList{
+            display: flex;
+            flex-shrink: 0;
+            justify-content: space-between; 
+            min-width: 300%;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            overflow-x: hidden;
+            animation: slide-left 40s linear infinite;
+      }
+      p{
+            font-size: 30px;
+          
+      }
+      @keyframes slide-left {
+            from {
+              -webkit-transform: translateX(0);
+                      transform: translateX(0);
+            }
+            to {
+              -webkit-transform: translateX(-100%);
+                      transform: translateX(-100%);
+            }
+          }
+}

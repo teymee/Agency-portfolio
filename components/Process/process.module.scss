@@ -1,0 +1,56 @@
+.processes {
+	display: flex;
+	margin-left: 100px;
+	justify-content: center;
+	.planDev {
+		margin-right: 50px;
+	}
+	.plan,
+	.dev,
+	.prototype,
+	.QA {
+		width: 300px;
+		height: 200px;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		text-align: center;
+		border-radius: 20px;
+		font-size: 25px;
+	}
+	.plan {
+		padding: 0 20px;
+		background-color: #0f1822;
+	}
+	.dev {
+		background-color: var(--darkBlue);
+		margin-top: 30px;
+	}
+	.uiux {
+		background-color: var(--green);
+		width: 25%;
+		border-radius: 20px;
+		margin-right: 50px;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		font-size: 25px;
+	}
+
+	.prototype {
+		background-color: var(--lightBlue);
+	}
+	.QA {
+		background-color: #776bf8;
+		margin-top: 30px;
+		width: 400px;
+		font-size: 20px;
+	}
+}
+
+.process{
+	h1{
+		font-size: 30px;
+		margin-bottom: 50px;
+	}
+}

@@ -1,0 +1,33 @@
+.banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 100px 0;
+	
+	.bannerText {
+		flex: 3;
+	}
+	.bannerImg {
+		flex: 1;
+		text-align: right;
+	}
+	span {
+		background-color: #df5a38;
+		padding: 5px 10px;
+		border-radius: 10px;
+	}
+
+	h1 {
+		margin-top: 30px !important;
+		margin-bottom: 40px;
+		font-size: 70px;
+		
+		width: 80%;
+	}
+
+	p {
+		font-weight: 200;
+		width: 70%;
+		line-height: 30px;
+	}
+}

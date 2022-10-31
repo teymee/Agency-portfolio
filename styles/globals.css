@@ -1,26 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+	--primaryColor :  #080d13;
+	--orange: #f77961;
+	--green:#1fbf75;
+	--lightBlue: #33a9ff;
+	--darkBlue: #2b64f8;
+}
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: "Work Sans", sans-serif;
+	background: #080d13;
+	color: white;
+  overflow-x: hidden;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
-
+li {
+	list-style: none;
+}
+h1 {
+	font-weight: 400;
+}
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+	html {
+		color-scheme: dark;
+	}
+	body {
+		color: white;
+		background: black;
+	}
 }

@@ -1,0 +1,16 @@
+.container {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+	ul {
+		display: flex;
+		justify-content: space-between;
+		li {
+			padding: 0 20px;
+		}
+		li:last-child {
+			padding-right: 0;
+		}
+	}
+}
