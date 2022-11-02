@@ -3,7 +3,8 @@ import styles from "./navbar.module.scss";
 
 export default function Navbar() {
 	return (
-		<nav className={styles.container}>
+		<nav className={styles.nav}>
+			<div className={styles.container}>
 			<div>Logo</div>
 			<div>
 				<ul>
@@ -13,6 +14,8 @@ export default function Navbar() {
 					<li>Our Works</li>
 				</ul>
 			</div>
+			</div>
+	
 		</nav>
 	);
 }

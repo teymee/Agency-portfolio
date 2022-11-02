@@ -1,23 +1,28 @@
 import React from "react";
 import styles from './banner.module.scss'
+import BannerSlide from "./BannerSlide";
 
 function Banner() {
+	let data = [
+		{
+		
+		badge:"Mobile app dev",
+		text:"Mobile App Development ",
+		description: "Duis officia enim sit aliqua cillum. Laborum cupidatat labore tempor id labore officia cupidatat consectetur officia incididunt. Magna fugiat in minim nostrud sit labore officia. Elit culpa nostrud proident commodo nisi nisi incididunt adipisicing nulla commodo id ut officia cillum.", 
+		image: "image"
+	},
+
+	{
+		
+		badge:"Web dev",
+		text:"Website App Development ",
+		description: "Duis officia enim sit aliqua cillum. Laborum cupidatat labore tempor id labore officia cupidatat consectetur officia incididunt. Magna fugiat in minim nostrud sit labore officia. Elit culpa nostrud proident commodo nisi nisi incididunt adipisicing nulla commodo id ut officia cillum.", 
+		image: "image"
+	}
+]
 	return (
 		<section className={styles.banner}>
-			<div className={styles.bannerText}>
-				<span> Mobile app dev </span>
-				<h1>Mobile App Development </h1>
-				<p>
-					Occaecat ullamco officia ut adipisicing cupidatat elit consectetur
-					elit dolore occaecat ut cillum. Aliquip Lorem commodo exercitation
-					eiusmod tempor id nulla proident minim do in. Occaecat irure ea veniam
-					aute cillum dolore proident sint eiusmod.
-				</p>
-			</div>
-
-                  <div className={styles.bannerImg}>
-                        Image
-                  </div>
+			<BannerSlide data={data} />
 		</section>
 	);
 }

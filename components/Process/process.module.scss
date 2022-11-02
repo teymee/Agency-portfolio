@@ -45,6 +45,24 @@
 	.prototype {
 		background-color: var(--lightBlue);
 	}
+	.uiux:hover{
+		background-color: #46dd97;
+	}
+
+	.prototype:hover{
+		background-color: #5fb5f1;
+	}
+	.QA:hover{
+		background-color: #8479fc;
+	}
+
+	.dev:hover{
+		background-color: #3c73fd;
+	}
+	.plan:hover{
+		background-color: #1d2836;
+	}
+
 	.QA {
 		background-color: #776bf8;
 		margin-top: 30px;
