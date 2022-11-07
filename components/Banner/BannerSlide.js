@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./banner.module.scss";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function BannerSlide({ data, position }) {
 	const [curPosition, setCurPosition] = useState(0);
@@ -25,16 +26,23 @@ export default function BannerSlide({ data, position }) {
 	}, [curPosition]);
 
 	return (
-	
-			<div className={styles.bannerSlide}>
-				<div className={styles.bannerText}>
+		<AnimatePresence>
+			<motion.div
+				key={curPosition}
+				initial={{ x: 100, opacity: 0 }}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ duration: 2, type: "ease" }}
+				exit={{ x: -500, opacity: 0 }}
+				className={`${styles.bannerSlide}`}
+			>
+				<motion.div className={styles.bannerText}>
 					<span> {data[curPosition].badge} </span>
 					<h1>{data[curPosition].text} </h1>
 					<p>{data[curPosition].description}</p>
-				</div>
+				</motion.div>
 
 				<div className={styles.bannerImg}> {data[curPosition].image}</div>
-			</div>
-		
+			</motion.div>
+		</AnimatePresence>
 	);
 }

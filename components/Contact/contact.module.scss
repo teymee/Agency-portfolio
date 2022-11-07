@@ -1,14 +1,15 @@
 .contact {
+	margin-bottom: 300px;
 	padding-top: 100px;
 	padding-bottom: 400px;
 	position: relative;
 	.header {
 		position: relative;
 		margin: 100px;
-		div{
+		div {
 			width: 100px;
 			height: 5px !important;
-			background-color: #49564F;
+			background-color: #49564f;
 			display: inline;
 		}
 	}
@@ -19,37 +20,46 @@
 	}
 	.second {
 		position: absolute;
-		right: 50px;
+		right: 0;
 		top: 120px;
 		font-size: 90px;
-		color: #49564F;
+		color: #49564f;
 		display: flex;
 		align-items: center;
 	}
-	.form{
+	.form {
 		position: absolute;
 		right: 50px;
 		top: 500px;
 		display: flex;
 		justify-content: space-between;
-		
-		form{
+
+		form {
 			width: 50%;
 			margin-right: 30px;
-			.firstSection{
+			.firstSection {
 				margin-bottom: 60px;
 			}
-			input, textarea{
+			input,
+			textarea {
 				background-color: transparent;
 				border-bottom: 1px solid grey;
-				padding: 10px ;
+				padding: 10px;
 				width: 90%;
 				margin-right: 20px;
 				margin-bottom: 40px;
 				outline: none;
 			}
+			button{
+				background-color: var(--orange);
+				display: block;
+				width: 90%;
+				padding: 10px 0;
+				color: white;
+				border-radius: 10px;
+			}
 		}
-		.text{
+		.text {
 			width: 40%;
 		}
 	}

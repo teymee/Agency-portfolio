@@ -1,67 +1,73 @@
 .industryList {
-	background-color: #0f1822;
+	// background-color: #0f1822;
+	box-shadow: 2px 7px 5px 0px rgba(0, 0, 0, 0.06);
 	padding: 20px 0;
 	border-radius: 5px;
+	cursor: pointer;
 	div {
 		display: flex;
 		justify-content: center;
 		width: 100%;
-            font-size: 30px;
+		font-size: 30px;
+	}
+	&:hover {
+		box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+		transition: ease-in-out 0.1s;
 	}
 }
 
 .industryList:nth-child(1) {
-	border-left: 2px solid var(--orange);
-      div {
+	border-left: 3px solid var(--orange);
+	div {
 		color: var(--orange);
 	}
 }
 
 .industryList:nth-child(2) {
-	border-left: 2px solid var(--lightBlue);
-      div {
+	border-left: 3px solid var(--lightBlue);
+	div {
 		color: var(--lightBlue);
 	}
 }
 
 .industryList:nth-child(3) {
-	border-left: 2px solid var(--green);
-      div {
+	border-left: 3px solid var(--green);
+	div {
 		color: var(--green);
 	}
 }
 
 .industryList:nth-child(4) {
-	border-left: 2px solid var(--orange);
-      div {
+	border-left: 3px solid var(--orange);
+	div {
 		color: var(--orange);
 	}
 }
 
 .industryList:nth-child(5) {
-	border-left: 2px solid var(--lightBlue);
-      div {
+	border-left: 3px solid var(--lightBlue);
+	div {
 		color: var(--lightBlue);
 	}
 }
 
 .industryList:nth-child(6) {
-	border-left: 2px solid var(--green);
-      div {
+	border-left: 3px solid var(--green);
+	div {
 		color: var(--green);
 	}
 }
 
 .industryList:nth-child(7) {
-	border-left: 2px solid var(--orange);
-      div {
+	border-left: 3px solid var(--orange);
+	div {
 		color: var(--orange);
 	}
 }
 
 .industryList:nth-child(8) {
-	border-left: 2px solid var(--lightBlue);
-      div {
+	border-left: 3px solid var(--lightBlue);
+	div {
 		color: var(--lightBlue);
 	}
 }
@@ -69,7 +75,8 @@
 .industry {
 	margin: 100px 0;
 	h1 {
-		font-size: 40px;
+		font-size: 45px;
+		font-weight: 400;
 		margin-bottom: 20px;
 	}
 	h4 {

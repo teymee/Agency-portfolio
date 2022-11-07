@@ -2,6 +2,7 @@ import React from "react";
 import styles from './banner.module.scss'
 import BannerSlide from "./BannerSlide";
 
+
 function Banner() {
 	let data = [
 		{
@@ -21,7 +22,7 @@ function Banner() {
 	}
 ]
 	return (
-		<section className={styles.banner}>
+		<section className={`${styles.banner}`}>
 			<BannerSlide data={data} />
 		</section>
 	);
