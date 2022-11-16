@@ -1,9 +1,15 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styles from "./contact.module.scss";
 
 function Contact() {
 	return (
-		<section className={styles.contact}>
+		<motion.section
+			initial={{ opacity: 0, y: -400 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ delay: 0.2, duration: 1 }}
+			className={styles.contact}
+		>
 			<div className={styles.header}>
 				<h1 className={styles.first}>Contact us</h1>
 				<h1 className={styles.second}>
@@ -34,7 +40,7 @@ function Contact() {
 					</p>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }
 

@@ -6,8 +6,8 @@ export default function Technology({ header, stack }) {
 			<div className={styles.inner}>
                   <h3>{header}</h3>
 			<ul>
-				{stack.map((item) => (
-					<li key={item}>{item}</li>
+				{stack.map((item, index) => (
+					<li key={index}>{item}</li>
 				))}
 			</ul>
                   </div>

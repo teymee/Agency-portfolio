@@ -4,7 +4,7 @@
 	h1 {
 		text-align: center !important;
 		font-size: 35px;
-            font-weight: 600;
+		font-weight: 600;
 		margin: 20px 0;
 	}
 	.serviceList {
@@ -33,6 +33,29 @@
 		to {
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.services {
+		margin: 80px 0;
+
+		h1 {
+			font-size: 25px !important;
+			font-weight: 400;
+			margin: 10px 0;
+		}
+
+		.serviceList {
+			min-width: 720%;
+
+			animation: slide-left 35s linear infinite;
+		}
+
+		p {
+			font-size: 15px;
+			padding: 10px 25px;
 		}
 	}
 }

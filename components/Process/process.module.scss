@@ -1,5 +1,4 @@
 .processes {
-
 	align-items: center;
 	.list {
 		display: flex;
@@ -48,70 +47,38 @@
 	}
 }
 
-// .planDev {
-// 	margin-right: 50px;
-// }
-// .plan,
-// .dev,
-// .prototype,
-// .QA {
-// 	width: 300px;
-// 	height: 200px;
-// 	justify-content: center;
-// 	align-items: center;
-// 	display: flex;
-// 	flex-direction: column;
-// 	text-align: center;
-// 	border-radius: 20px;
-// 	font-size: 20px;
-// 	cursor: pointer;
+@media screen and (max-width: 600px) {
+	.process {
+		h1 {
+			font-size: 25px;
+			margin-bottom: 20px;
+			font-weight: 500;
+		}
+	}
 
-// }
-// .plan {
-// 	padding: 0 20px;
-// 	background-color: #0f1822;
+	.processes {
+		.list {
+			h1 {
+				font-size: 30px;
+				margin-bottom: 20px;
+			}
+			.title {
+				font-weight: 500;
+				font-size: 17px !important;
+				margin-bottom: 20px;
 
-// }
-// .dev {
-// 	background-color: var(--darkBlue);
-// 	margin-top: 30px;
-// }
-// .uiux {
-// 	background-color: var(--green);
-// 	width: 25%;
-// 	border-radius: 20px;
-// 	margin-right: 50px;
-// 	justify-content: center;
-// 	align-items: center;
-// 	display: flex;
-// 	font-size: 25px;
-// 	cursor: pointer;
-// }
+				&::before {
+					content: "━━━" !important;
+				}
+				&::after {
+					content: "━━━" !important;
+				}
+			}
 
-// .prototype {
-// 	background-color: var(--lightBlue);
-// }
-// .uiux:hover{
-// 	background-color: #46dd97;
-// }
-
-// .prototype:hover{
-// 	background-color: #5fb5f1;
-// }
-// .QA:hover{
-// 	background-color: #8479fc;
-// }
-
-// .dev:hover{
-// 	background-color: #3c73fd;
-// }
-// .plan:hover{
-// 	background-color: #1d2836;
-// }
-
-// .QA {
-// 	background-color: #776bf8;
-// 	margin-top: 30px;
-// 	width: 400px;
-// 	font-size: 20px;
-// }
+			p {
+				width: 85%;
+				font-size: 13px;
+			}
+		}
+	}
+}

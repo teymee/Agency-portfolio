@@ -64,3 +64,60 @@
 		}
 	}
 }
+
+
+@media screen and (max-width:600px) {
+	.contact {
+	
+		.header {
+			margin: 100px 0;
+			div {
+				width: 70px;
+				height: 1px !important;
+				margin-right: 10px;
+			}
+		}
+		.first {
+		
+			font-size: 30px;
+		}
+		.second {
+		
+			top: 40px;
+			font-size: 25px;
+		}
+		.form {
+			position: absolute;
+			right: 0px;
+			top: 300px;
+	flex-direction: column-reverse;
+			form {
+				width: 98%;
+				margin-right: 30px;
+				.firstSection {
+					margin-bottom: 30px;
+				}
+				input,
+				textarea {
+					
+					padding: 10px;
+					width: 94%;
+					
+				}
+				button{
+					background-color: var(--orange);
+					display: block;
+					width: 98%;
+					padding: 10px 0;
+					color: white;
+					border-radius: 10px;
+				}
+			}
+			.text {
+				width: 95%;
+				margin: auto;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}

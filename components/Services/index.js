@@ -1,9 +1,15 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styles from "./services.module.scss";
 
 export default function Services() {
 	return (
-		<section className={styles.services}>
+		<motion.section
+			className={`${styles.services} lg:my-40`}
+			initial={{ opacity: 0, y: 400 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ delay: 0.1, duration: 1 }}
+		>
 			<h1>Services</h1>
 			<div className={styles.serviceList}>
 				<p>Mobile App Development</p>
@@ -19,6 +25,6 @@ export default function Services() {
 				<p> Project Management</p>
 				<p>Testing</p>
 			</div>
-		</section>
+		</motion.section>
 	);
 }

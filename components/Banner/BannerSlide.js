@@ -6,8 +6,6 @@ export default function BannerSlide({ data, position }) {
 	const [curPosition, setCurPosition] = useState(0);
 
 	const autoSlide = () => {
-		console.log(curPosition);
-		console.log(data.length);
 		if (curPosition >= data.length - 1) {
 			setCurPosition(0);
 		} else {
@@ -17,8 +15,7 @@ export default function BannerSlide({ data, position }) {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			autoSlide();
-			console.log(curPosition);
-		}, 4000);
+		}, 5000);
 
 		return () => {
 			clearInterval(interval);
@@ -31,7 +28,7 @@ export default function BannerSlide({ data, position }) {
 				key={curPosition}
 				initial={{ x: 100, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
-				transition={{ duration: 2, type: "ease" }}
+				transition={{ duration: 1.5, type: "ease" }}
 				exit={{ x: -500, opacity: 0 }}
 				className={`${styles.bannerSlide}`}
 			>

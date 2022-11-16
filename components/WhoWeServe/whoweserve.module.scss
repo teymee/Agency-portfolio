@@ -79,3 +79,64 @@
 		margin-bottom: 50px;
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.process {
+		h1 {
+			font-size: 25px;
+			margin-bottom: 50px;
+		}
+	}
+
+	.processes {
+		flex-direction: column;
+		justify-content: center;
+		.planDev {
+			margin-right: 0px;
+		}
+		.plan,
+		.dev,
+		.prototype,
+		.QA {
+			width: 300px;
+			height: 200px;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			border-radius: 20px;
+			font-size: 20px;
+			cursor: pointer;
+			color: white;
+		}
+		.plan {
+			padding: 0 20px;
+			background-color: #0f1822;
+		}
+		.dev {
+			background-color: var(--darkBlue);
+			margin-top: 30px;
+		}
+		.uiux {
+			color: white;
+			background-color: #46dd97;
+			width: 300px;
+			height: 300px;
+			margin-top: 20px;
+			margin-right: 0px;
+		}
+		.prototype{
+			display: block;
+			margin-top: 20px;
+			display: flex;
+			align-items: center;
+		}
+
+		.QA {
+			background-color: #776bf8;
+			margin-top: 30px;
+			font-size: 20px;
+		}
+	}
+}
