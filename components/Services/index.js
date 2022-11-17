@@ -9,6 +9,7 @@ export default function Services() {
 			initial={{ opacity: 0, y: 400 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.1, duration: 1 }}
+			viewport={{ once: true }}
 		>
 			<h1>Services</h1>
 			<div className={styles.serviceList}>

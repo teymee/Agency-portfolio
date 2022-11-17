@@ -66,7 +66,9 @@ export default function Industry() {
 		initial={{opacity:0, y: 400, }}
 		whileInView={{opacity:1, y: 0}}
 		transition={{ delay: 0.2, duration: 1 }}
-		className={styles.industry} id="industryList">
+		className={styles.industry} 
+		viewport={{ once: true }}
+		id="industryList">
 			<h1 className="text-center">Industries</h1>
 			<div className="grid lg:grid-cols-4 grid-cols-1 gap-4">
 				{industries.map((item, index) => {
@@ -75,6 +77,7 @@ export default function Industry() {
 							initial={{ y: 400, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{ delay: item.delay, duration: 1 }}
+							viewport={{ once: true }}
 							className={`text-center ${styles.industryList} `}
 							key={index}
 							ref={ref}

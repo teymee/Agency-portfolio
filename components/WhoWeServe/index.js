@@ -9,6 +9,7 @@ export default function Whoweserve() {
 			initial={{ opacity: 0, y: 400 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.2, duration: 1 }}
+			viewport={{ once: true }}
 			className={`${styles.process} lg:my-40`}
 		>
 			<h1 className="text-center">Who We Serve</h1>
@@ -18,6 +19,7 @@ export default function Whoweserve() {
 						initial={{ opacity: 0, x: -400 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.2, duration: 1 }}
+						viewport={{ once: true }}
 						className={styles.plan}
 						data-tilt
 						data-tilt-max="40"
@@ -43,6 +45,7 @@ export default function Whoweserve() {
 					initial={{ opacity: 0, y: 400 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.2, duration: 1 }}
+					viewport={{ once: true }}
 					data-tilt
 					data-tilt-max="40"
 					data-tilt-speed="1000"
@@ -56,6 +59,7 @@ export default function Whoweserve() {
 						initial={{ opacity: 0, x: 400 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.2, duration: 1 }}
+						viewport={{ once: true }}
 						data-tilt
 						data-tilt-max="40"
 						data-tilt-speed="1000"
@@ -68,6 +72,7 @@ export default function Whoweserve() {
 						initial={{ opacity: 0, x: 400 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.2, duration: 1 }}
+						viewport={{ once: true }}
 						data-tilt
 						data-tilt-max="40"
 						data-tilt-speed="1000"

@@ -8,6 +8,7 @@ function Contact() {
 			initial={{ opacity: 0, y: -400 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.2, duration: 1 }}
+			viewport={{ once: true }}
 			className={styles.contact}
 		>
 			<div className={styles.header}>
