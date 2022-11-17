@@ -13,8 +13,7 @@ function Contact() {
 		>
 			<div className={styles.header}>
 				<h1 className={styles.first}>Contact us</h1>
-				<h1 className={styles.second}>
-					{" "}
+				<h1 className={styles.second}>					
 					<div></div> Have a project?
 				</h1>
 			</div>
