@@ -38,7 +38,9 @@ export default function BannerSlide({ data, position }) {
 					<p>{data[curPosition].description}</p>
 				</motion.div>
 
-				<div className={styles.bannerImg}> {data[curPosition].image}</div>
+				<div className={styles.bannerImg}>
+					<img src={data[curPosition].image} alt={data[curPosition].badge} />
+				</div>
 			</motion.div>
 		</AnimatePresence>
 	);

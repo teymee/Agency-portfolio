@@ -10,7 +10,7 @@ function Banner() {
 		badge:"Mobile app dev",
 		text:"Mobile App Development ",
 		description: "Duis officia enim sit aliqua cillum. Laborum cupidatat labore tempor id labore officia cupidatat consectetur officia incididunt. Magna fugiat in minim nostrud sit labore officia. Elit culpa nostrud proident commodo nisi nisi incididunt adipisicing nulla commodo id ut officia cillum.", 
-		image: "image"
+		image: "svg/web2.svg",
 	},
 
 	{
@@ -18,7 +18,8 @@ function Banner() {
 		badge:"Web dev",
 		text:"Website App Development ",
 		description: "Duis officia enim sit aliqua cillum. Laborum cupidatat labore tempor id labore officia cupidatat consectetur officia incididunt. Magna fugiat in minim nostrud sit labore officia. Elit culpa nostrud proident commodo nisi nisi incididunt adipisicing nulla commodo id ut officia cillum.", 
-		image: "image"
+		image: "svg/app1.svg",
+	
 	}
 ]
 	return (
