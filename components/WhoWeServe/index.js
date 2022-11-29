@@ -14,6 +14,7 @@ export default function Whoweserve() {
 		>
 			<h1 className="text-center">Who We Serve</h1>
 			<motion.div className={styles.processes}>
+				
 				<motion.div className={styles.planDev}>
 					<motion.div
 						initial={{ opacity: 0, x: -400 }}
@@ -31,7 +32,8 @@ export default function Whoweserve() {
 					<motion.div
 						initial={{ opacity: 0, x: -400 }}
 						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ delay: 0.3, duration: 1 }}
+						transition={{ delay: 0.2, duration: 1 }}
+						viewport={{ once: true }}
 						data-tilt
 						data-tilt-max="40"
 						data-tilt-speed="1000"

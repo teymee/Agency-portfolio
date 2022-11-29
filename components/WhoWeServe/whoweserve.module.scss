@@ -92,13 +92,16 @@
 	.processes {
 		flex-direction: column;
 		justify-content: center;
+
+		margin: auto;
 		.planDev {
 			margin-right: 0px;
 		}
 		.plan,
 		.dev,
 		.prototype,
-		.QA {
+		.QA
+		 {
 			width: 300px;
 			height: 200px;
 			justify-content: center;
@@ -110,6 +113,7 @@
 			font-size: 20px;
 			cursor: pointer;
 			color: white;
+			margin: auto;
 		}
 		.plan {
 			padding: 0 20px;
@@ -124,8 +128,9 @@
 			background-color: #46dd97;
 			width: 300px;
 			height: 300px;
-			margin-top: 20px;
+			margin-top: 20px !important;
 			margin-right: 0px;
+			margin: auto;
 		}
 		.prototype{
 			display: block;
