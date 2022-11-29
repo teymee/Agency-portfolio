@@ -3,6 +3,7 @@ import styles from "./navbar.module.scss";
 import { motion, useScroll } from "framer-motion";
 
 import useWindowSize from "../../utils/WindowsSize";
+import Link from "next/link";
 
 export default function Navbar() {
 	const { scrollYProgress } = useScroll();
@@ -19,7 +20,6 @@ export default function Navbar() {
 			height: 0,
 		},
 	};
-	console.log(width);
 	return (
 		<nav className={styles.nav}>
 			<motion.div
@@ -41,19 +41,40 @@ export default function Navbar() {
 							transition={{ type: "tween", duration: 0.2 }}
 							className={toggle ? styles.mobileNav : ""}
 						>
-							<li>About</li>
-							<li>Services</li>
-							<li>Technologies</li>
-							<li>Our Works</li>
+							<Link href="#Industry">
+								<li>Industry</li>
+							</Link>
+							<Link href="#process">
+								<li>Process</li>
+							</Link>
+							<Link href="#service">
+								<li>Services</li>
+							</Link>
+							<Link href="#works">
+								<li>Our Works</li>
+							</Link>
+							<Link href="#contact">
+							<li>Contact us</li>
+						</Link>
+							
 						</motion.ul>
 					)}
-					<ul
-						className={toggle ? styles.mobileNav : ""}
-					>
-						<li>About</li>
-						<li>Services</li>
-						<li>Technologies</li>
-						<li>Our Works</li>
+					<ul className={toggle ? styles.mobileNav : ""}>
+						<Link href="#Industry">
+							<li>Industry</li>
+						</Link>
+						<Link href="#process">
+							<li>Process</li>
+						</Link>
+						<Link href="#service">
+							<li>Services</li>
+						</Link>
+						<Link href="#works">
+								<li>Our Works</li>
+							</Link>
+						<Link href="#contact">
+							<li>Contact us</li>
+						</Link>
 					</ul>
 				</div>
 

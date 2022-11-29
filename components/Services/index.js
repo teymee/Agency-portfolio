@@ -10,6 +10,7 @@ export default function Services() {
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.1, duration: 1 }}
 			viewport={{ once: true }}
+			id="service"
 		>
 			<h1>Services</h1>
 			<div className={styles.serviceList}>

@@ -63,6 +63,7 @@ export default function Process() {
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.2, duration: 1 }}
 			viewport={{ once: true }}
+			id="process"
 		>
 			<h1 className="text-center">Process we follow</h1>
 			<div

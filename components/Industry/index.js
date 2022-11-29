@@ -8,10 +8,11 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { CiStethoscope } from "react-icons/ci";
 import { CiPlane } from "react-icons/ci";
 import { CiBeaker1 } from "react-icons/ci";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function Industry() {
-	const ref = useRef(null);
+	const ref = useRef();
+	const isInView = useInView({ root: ref, margin: "-100px 0px 0px 0px" });
 
 	let industries = [
 		{
@@ -60,16 +61,21 @@ export default function Industry() {
 			delay: 0.8,
 		},
 	];
-
+	useEffect(() => {
+		console.log("Element is in view: ", isInView)
+	    }, [isInView])
 	return (
 		<motion.section
-		initial={{opacity:0, y: 400, }}
-		whileInView={{opacity:1, y: 0}}
-		transition={{ delay: 0.1, duration: 0.95 }}
-		className={styles.industry} 
-		viewport={{ once: true }}
-		id="industryList">
-			<h1 className="text-center">Industries</h1>
+			initial={{ opacity: 0, y: 400 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ delay: 0.1, duration: 0.95 }}
+			className={styles.industry}
+			viewport={{ once: true }}
+			ref={ref}
+		>
+			<h1 id="Industry" className="text-center">
+				Industries
+			</h1>
 			<div className="grid lg:grid-cols-4 grid-cols-1 gap-4">
 				{industries.map((item, index) => {
 					return (
@@ -77,7 +83,7 @@ export default function Industry() {
 							initial={{ y: 400, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{ delay: item.delay, duration: 0.85 }}
-							viewport={{ once: true, margin:"100px 0px 0px 0px" }}
+							viewport={{ once: true, margin: "100px 0px 0px 0px" }}
 							className={`text-center ${styles.industryList} `}
 							key={index}
 							ref={ref}
