@@ -9,10 +9,12 @@ import { CiStethoscope } from "react-icons/ci";
 import { CiPlane } from "react-icons/ci";
 import { CiBeaker1 } from "react-icons/ci";
 import { motion, useInView } from "framer-motion";
+import useWindowSize from "../../utils/WindowsSize";
 
 export default function Industry() {
 	const ref = useRef();
-	const isInView = useInView({ root: ref, margin: "-100px 0px 0px 0px" });
+	const isInView = useInView(ref, { margin: "-200px 0px 0px 0px" });
+	const { width } = useWindowSize();
 
 	let industries = [
 		{
@@ -61,9 +63,9 @@ export default function Industry() {
 			delay: 0.8,
 		},
 	];
-	useEffect(() => {
-		console.log("Element is in view: ", isInView)
-	    }, [isInView])
+	// useEffect(() => {
+	// 	console.log("Element is in view: ", isInView);
+	// }, [isInView]);
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: 400 }}
@@ -71,7 +73,6 @@ export default function Industry() {
 			transition={{ delay: 0.1, duration: 0.95 }}
 			className={styles.industry}
 			viewport={{ once: true }}
-			ref={ref}
 		>
 			<h1 id="Industry" className="text-center">
 				Industries
@@ -82,7 +83,9 @@ export default function Industry() {
 						<motion.div
 							initial={{ y: 400, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
-							transition={{ delay: item.delay, duration: 0.85 }}
+							transition={
+								600 < width ? { delay: item.delay, duration: 0.85 } :  {duration: 0.7}
+							}
 							viewport={{ once: true, margin: "100px 0px 0px 0px" }}
 							className={`text-center ${styles.industryList} `}
 							key={index}

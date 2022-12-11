@@ -34,7 +34,7 @@ export default function Works() {
 			description:
 				" Lorem aute tempor nisi sit commodo adipisicing qui culpa veniam eiusmod dolore mollitt.",
 			img: "/image/fifth.jpg",
-			delay: 0.4,
+			delay: 0.1,
 		},
 	];
 	return (

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./process.module.scss";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
+import useWindowSize from "../../utils/WindowsSize";
 
 {
 	/* <div
@@ -15,44 +16,45 @@ data-tilt-perspective="500"
 </div> */
 }
 export default function Process() {
+	const {width} = useWindowSize()
 	let data = [
 		{
 			title: "Plan requirement gathering",
 			details:
 				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
-			delay: 0.2,
+			delay: 0.05,
 		},
 		{
 			title: "UI/UX",
 			details:
 				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
-			delay: 0.3,
+			delay: 0.1,
 		},
 		{
 			title: "Prototype",
 			details:
 				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
-			delay: 0.4,
+			delay: 0.15,
 		},
 		{
 			title: "Development",
 			details:
 				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
-			delay: 0.5,
+			delay: 0.2,
 		},
 
 		{
 			title: "Quality Assuarance",
 			details:
 				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
-			delay: 0.6,
+			delay: 0.25,
 		},
 
 		{
 			title: "Maintenance",
 			details:
 				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
-			delay: 0.7,
+			delay: 0.3,
 		},
 	];
 
@@ -61,7 +63,7 @@ export default function Process() {
 			className={`${styles.process} lg:mb-40`}
 			initial={{ opacity: 0, y: 400 }}
 			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ delay: 0.2, duration: 1 }}
+			transition={{ delay: 0, duration: 1 }}
 			viewport={{ once: true }}
 			id="process"
 		>
@@ -75,7 +77,7 @@ export default function Process() {
 							<motion.div
 								initial={{ y: 400, opacity: 0 }}
 								whileInView={{ y: 0, opacity: 1 }}
-								transition={{ delay: item.delay, duration: 1.3 }}
+								transition={ 600 < width ? { delay: item.delay, duration: 1 } : {duration: 1}}
 								viewport={{ once: true }}
 								className={`${styles.list} mt-5`}
 								key={index}
