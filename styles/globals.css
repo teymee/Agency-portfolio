@@ -9,6 +9,29 @@
 	--lightBlue: #33a9ff;
 	--darkBlue: #2b64f8;
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+
+	border-radius: 10px;
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+	background: var(--orange); 
+	border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+	background: #b30000; 
+    }
+
 html,
 body {
 	padding: 0;

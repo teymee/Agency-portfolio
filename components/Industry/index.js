@@ -67,13 +67,7 @@ export default function Industry() {
 	// 	console.log("Element is in view: ", isInView);
 	// }, [isInView]);
 	return (
-		<motion.section
-			initial={{ opacity: 0, y: 400 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ delay: 0.1, duration: 0.95 }}
-			className={styles.industry}
-			viewport={{ once: true }}
-		>
+		<motion.section className={styles.industry}>
 			<h1 id="Industry" className="text-center">
 				Industries
 			</h1>
@@ -81,15 +75,8 @@ export default function Industry() {
 				{industries.map((item, index) => {
 					return (
 						<motion.div
-							initial={{ y: 400, opacity: 0 }}
-							whileInView={{ y: 0, opacity: 1 }}
-							transition={
-								600 < width ? { delay: item.delay, duration: 0.85 } :  {duration: 0.7}
-							}
-							viewport={{ once: true, margin: "100px 0px 0px 0px" }}
 							className={`text-center ${styles.industryList} `}
 							key={index}
-							ref={ref}
 						>
 							<div>{item.icon}</div>
 							<h4>{item.name}</h4>

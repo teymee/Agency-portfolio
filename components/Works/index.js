@@ -34,18 +34,11 @@ export default function Works() {
 			description:
 				" Lorem aute tempor nisi sit commodo adipisicing qui culpa veniam eiusmod dolore mollitt.",
 			img: "/image/fifth.jpg",
-			delay: 0.1,
+			delay: 0,
 		},
 	];
 	return (
-		<motion.section
-			className={styles.works}
-			initial={{ opacity: 0, y: 400 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ delay: 0.1, duration: 1 }}
-			viewport={{ once: true }}
-			id="works"
-		>
+		<motion.section className={styles.works} id="works">
 			<h1 className="text-center">Works</h1>
 			<div className="grid lg:grid-cols-3  grid-cols-1 gap-4">
 				{data.map((item, index) => (

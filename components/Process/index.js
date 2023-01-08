@@ -16,57 +16,51 @@ data-tilt-perspective="500"
 </div> */
 }
 export default function Process() {
-	const {width} = useWindowSize()
+	const { width } = useWindowSize();
 	let data = [
 		{
 			title: "Plan requirement gathering",
 			details:
-				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
+				" We follow the first and foremost priority of gathering requirements, resources, and information to begin our project.",
 			delay: 0.05,
 		},
 		{
 			title: "UI/UX",
 			details:
-				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
+				" We create catchy and charming designs with the latest tools of designing to make it a best user-friendly experience.",
 			delay: 0.1,
 		},
 		{
 			title: "Prototype",
 			details:
-				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
+				" After designing, you will get your prototype, which will be sent ahead for the development process for the product.",
 			delay: 0.15,
 		},
 		{
 			title: "Development",
 			details:
-				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
+				"Development of mobile application/web/blockchain started using latest tools and technologies with transparency.",
 			delay: 0.2,
 		},
 
 		{
 			title: "Quality Assuarance",
 			details:
-				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
+				"Hyperlink values quality and provides 100% bug free application with no compromization in it.",
+
 			delay: 0.25,
 		},
 
 		{
-			title: "Maintenance",
+			title: "Deployment",
 			details:
-				" Cillum irure tempor est eiusmod dolor ullamco anim est quis incididunt sint ut elit. Enim laboris anim cillum tempor id.",
+				"After trial and following all processes, your app is ready to launch on the App store or Play Store.",
 			delay: 0.3,
 		},
 	];
 
 	return (
-		<motion.section
-			className={`${styles.process} lg:mb-40`}
-			initial={{ opacity: 0, y: 400 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ delay: 0, duration: 1 }}
-			viewport={{ once: true }}
-			id="process"
-		>
+		<motion.section className={`${styles.process} lg:mb-40`} id="process">
 			<h1 className="text-center">Process we follow</h1>
 			<div
 				className={`${styles.processes} grid grid-cols-1  lg:grid-cols-3 gap-6`}
@@ -74,14 +68,7 @@ export default function Process() {
 				{data.map((item, index) => {
 					return (
 						<>
-							<motion.div
-								initial={{ y: 400, opacity: 0 }}
-								whileInView={{ y: 0, opacity: 1 }}
-								transition={ 600 < width ? { delay: item.delay, duration: 1 } : {duration: 1}}
-								viewport={{ once: true }}
-								className={`${styles.list} mt-5`}
-								key={index}
-							>
+							<motion.div className={`${styles.list} mt-5`} key={index}>
 								<h1>{++index}</h1>
 								<div className={styles.title}>
 									<h2> {item.title} </h2>
