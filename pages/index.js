@@ -16,7 +16,7 @@ export default function Home() {
 		<>
 			<Head>
 				<title>
-					Zovack— Your best Web Design, Website & App Development Agency
+					Zovack — Your best Web Design, Website & App Development Agency
 				</title>
 				<meta
 					name="description"
