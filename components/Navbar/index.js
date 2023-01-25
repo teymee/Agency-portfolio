@@ -27,7 +27,7 @@ export default function Navbar() {
 				style={{ scaleX: scrollYProgress }}
 			/>
 			<div className={styles.container}>
-				<div><img src="/image/logo.jpeg" alt="Zovack logo" width={55}/></div>
+				<div><img src="/image/logo.jpeg" alt="Zovack logo" width={51}/></div>
 
 				<div>
 					{width <= 600 && (
