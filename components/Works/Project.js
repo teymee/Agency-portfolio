@@ -12,9 +12,9 @@ export default function Project({ details, number }) {
 		<motion.div className={styles.project}>
 			<h2>0{number}</h2>
 			<div>
-				<h5>{details.name}</h5>
+				<h5>{details.title}</h5>
 				<p>{details.description}</p>
-				<img src={details.img} alt={details.name} />
+				<img src={details.image} alt={details.title} />
 			</div>
 		</motion.div>
 	);

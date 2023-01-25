@@ -2,8 +2,28 @@ import { motion } from "framer-motion";
 import React from "react";
 import Project from "./Project";
 import styles from "./works.module.scss";
+import { useCollection } from "react-firebase-hooks/firestore";
+import firebase from "../../firebase/clientApp";
+import "firebase/compat/firestore";
 
 export default function Works() {
+	const [projects, projectsLoading, projectsError] = useCollection(
+		firebase.firestore().collection("projects"),
+		{}
+	);
+	let content 
+	
+	if (!projectsLoading) {
+		
+	console.log(projects)
+		
+
+	content = projects.docs.map((doc, index) => {
+			let data = doc.data();
+			return <Project number={++index} details={data} key={index} />;
+		});
+	}
+
 	let data = [
 		{
 			name: "Something",
@@ -41,9 +61,7 @@ export default function Works() {
 		<motion.section className={styles.works} id="works">
 			<h1 className="text-center">Works</h1>
 			<div className="grid lg:grid-cols-3  grid-cols-1 gap-4">
-				{data.map((item, index) => (
-					<Project number={++index} details={item} key={index} />
-				))}
+				{content}
 			</div>
 		</motion.section>
 	);
