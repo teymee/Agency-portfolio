@@ -2,7 +2,7 @@
 	display: flex;
 	position: relative;
 	justify-content: space-between;
-	padding: 30px 5rem;
+	padding: 0px 5rem;
 	align-items: center;
 
 	svg {
@@ -29,18 +29,25 @@
 	z-index: 999;
 	background-color: white;
 	color: var(--primaryColor) !important;
+	img{
+		width: 150px;
+		height: 130px;
+	}
 }
 
 @media screen and (max-width: 600px) {
 	.container {
-		padding: 20px;
+		padding: 0 20px;
 		svg {
 			display: inline-block;
 		}
 		.mobileNav{
 			display: block;
 		}
-
+		img{
+			width: 100px;
+			height: 100px;
+		}
 		ul {
 			display: none;
 			flex-direction: column;

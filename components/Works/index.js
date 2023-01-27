@@ -15,7 +15,7 @@ export default function Works() {
 	
 	if (!projectsLoading) {
 		
-	console.log(projects)
+
 		
 
 	content = projects.docs.map((doc, index) => {
